@@ -14,9 +14,11 @@ html {
     position: relative;
 }
 body {
-    font-size: 16px;
+    font-size: 15px;
     /* Margin bottom to support sticky footer */
     margin-bottom: 68px;
+    background-color: rgb(245, 247, 249);
+    font-family: 'Titillium Web', sans-serif;
 }
 
 @media (max-width: 991px) {
@@ -50,43 +52,113 @@ img {
     max-width: 100%;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+table th,table td {
+    padding:3px 10px;
+    border: 1px solid #ccc;
+}
+
+#accordion {
+    margin-top: 25px;
+}
+
+.panel-group .panel, .panel-group .panel.panel-default, .panel-group .panel.panel-default .panel-collapse .panel-body, .panel-group .panel.panel-default .panel-heading {
+    background: none;
+    border: none;
+    border-color: transparent;
+    border-radius: 0px;
+    box-shadow: none;
+}
+    
+.panel-group .panel.panel-default .panel-heading .panel-title {
+    color: #0d2b3e;
+    font-weight: bold;
+}
+
+.panel-group .panel.panel-default .panel-heading .panel-title a.active{
+    background-color: transparent;
+    color: #0099e5;
+    font-weight: bold;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 /*----------------------
        CONTENT
 -----------------------*/
 .container-fluid {
-    max-width: 1500px;
+    max-width: 1024px;
 }
 .content {
-    font-family: "Merriweather", serif;
-    font-size: 16px;
+    background-color: white;
+    font-family: "Camphor,Open Sans,Segoe UI",sans-serif;
+    font-size: 15px;
     line-height: 28px;
     letter-spacing: 0.100000001490116px;
     color: #3A4145;
     font-weight: 300;
     text-align: justify;
+    border-left: 1px solid rgba(120,134,156,.08);
 }
+
+.content .header {
+    border-bottom: 1px solid rgba(120,134,156,.08)
+}
+
+.content .header a {
+    float: right;
+    margin-top: 8px;
+}
+
+.content .header a:hover {
+    cursor: pointer;
+}
+
+#sidebar {
+
+}
+
 #sidebar .text-muted {
-    font-weight: 500;
+    font-weight: bold;
+    color: #0d2b3e;
 }
 
 /* OVERRIDE BOOTSTRAP */
 pre {
-    padding: 0;
+    padding: 5px;
 }
 .nav>li>a {
     padding: 5px 15px;
+    color:#4c555a;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: transparent;
+    color: #0099e5;
+    font-weight: bold;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: transparent;
+    color: #0099e5;
+    font-weight: bold;
 }
 
 /*----------------------
        HEADER
 -----------------------*/
 .site-header {
-    padding: 5% 0 5% 0;
-    background: #303538;
-    color: whitesmoke;
-    text-align: center;
-    margin-bottom: 2%;
-    border-bottom: 2px solid #c0c0c0;
+    padding: 10px 0 10px 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(120,134,156,.08);
 }
 .site-header a {
     color: whitesmoke;
@@ -112,11 +184,28 @@ pre {
     font-size: 56px;
 }
 
-.site-header .site-description  {
+.site-header .site-branding {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.header {
+    height:50px;
+    margin-top: 10px;
+}
+
+.header img.logo {
+    width: 120px;
+}
+
+.site-header .site-branding .site-description  {
     padding: 0;
-    font-size: 22px;
+    font-size: 16px;
+    color:gray;
     font-weight: bold;
     font-family: 'Titillium Web', sans-serif;
+    display: inline-block;
+    margin-top: 8px;
 }
 
 .site-header .button-line {
