@@ -1,30 +1,49 @@
-template:
-    directory: .
+template: 
+    url: https://github.com/diegorivas89/FixedSidebarTemplate
+    
+title: Fixed Sidebar Template
+subTitle: Another couscous template
+logoUrl: http://your-comapany.com/assets/logo.png
+footerText: Fixed Sidebar Template 2017
 
-github:
-    user: pnowy
-    repo: CouscousNativeTemplate
+# Header links
+headerLinks:
+    contact-us:
+        anchor: Contact Us
+        absoluteUrl: "https://your-comapany.com/contact-us"
 
-title: Native Couscous template
-subTitle: The template for Couscous
-fontAwesomeIcon: fa fa-hand-peace-o
-footerText: This is a footer text
-# googleAnalyticsCode: U-EXAMPLE-CODE
-
-# The left menu bar
+# Left menu
 menu:
     sections:
-        main:
-            name: Main documentation
+        # Home is a link without sub-items
+        home:
+            icon: fa-home
+            name: Home
+            absoluteUrl: /
+        # How to has sub-items in the section
+        howto:
+            icon: fa-question-circle-o
+            name: How to
             items:
-                home:
-                    text: Home page
-                    # You can use relative urls
-                    relativeUrl: doc/faq.html
-                foo:
-                    text: Another link
-                    # Or absolute urls
-                    absoluteUrl: https://example.com
-        other:
-            name: Other topics
+                vtex:
+                    name: Connect VTEX
+                    absoluteUrl: /howto/vtex.html
+                magento:
+                    name: Connect Magento
+                    absoluteUrl: /howto/magento.html
+                mshops:
+                    name: Connect MercadoShops
+                    absoluteUrl: /commingsoon.html
+        api:
+            icon: fa-code
+            name: API
             items:
+                getting-started:
+                    name: Getting Started
+                    absoluteUrl: /api/getting-started.html
+                users:
+                    name: Users
+                    absoluteUrl: /api/users.html
+                purchases:
+                    name: Purchases
+                    absoluteUrl: /api/purchases.html

@@ -2,9 +2,9 @@
 currentMenu: home
 ---
 
-# Couscous 'Native' Template
+# Fixed Sidebar Template
 
-This template is build based of the Couscous Dark template for one of my open source project. You could see this template in action on [NativeCriteria](http://pnowy.github.io/NativeCriteria/) GitHub project.
+This template is build based of the [Couscous 'Native' Template](https://github.com/pnowy/CouscousNativeTemplate) for the documentation page of a  company. This template is based on the styles of [Stripe docs](https://stripe.com/docs) with a fixed collapsable sidebar and a breadcrumb.
 
 ![](screenshot.png)
 
@@ -14,7 +14,7 @@ To use the template, set it up in your `couscous.yml` configuration file:
 
 ```yaml
 template:
-    url: https://github.com/pnowy/CouscousNativeTemplate
+    url: https://github.com/diegorivas89/FixedSidebarTemplate
 ```
 
 ## Configuration
@@ -22,57 +22,74 @@ template:
 Here are all the variables you can set in your `couscous.yml`:
 
 ```yaml
-# Base URL of the published website
-baseUrl: http://username.github.io/project
+template: 
+    url: https://github.com/diegorivas89/FixedSidebarTemplate
+    
+title: Fixed Sidebar Template
+subTitle: Another couscous template
+logoUrl: http://your-comapany.com/assets/logo.png
+footerText: Fixed Sidebar Template 2017
 
-# Used to link to the GitHub project
-github:
-    user: myself
-    repo: my-project
+# Header links
+headerLinks:
+    contact-us:
+        anchor: Contact Us
+        absoluteUrl: "https://your-comapany.com/contact-us"
 
-title: My project
-subTitle: This is a great project.
-# the icon next to page title from Font Awesome library
-fontAwesomeIcon: fa fa-hand-peace-o
-footerText: This is a footer text
-googleAnalyticsCode: GOOGLE-ANALYTICS-CODE
-
-# The left menu bar
+# Left menu
 menu:
     sections:
-        main:
-            name: Main documentation
+        # Home is a link without sub-items
+        home:
+            icon: fa-home
+            name: Home
+            absoluteUrl: /
+        # How to has sub-items in the section
+        howto:
+            icon: fa-question-circle-o
+            name: How to
             items:
-                home:
-                    text: Home page
-                    # You can use relative urls
-                    relativeUrl: doc/faq.html
-                foo:
-                    text: Another link
-                    # Or absolute urls
-                    absoluteUrl: https://example.com
-        other:
-            name: Other topics
+                vtex:
+                    name: Connect VTEX
+                    absoluteUrl: /howto/vtex.html
+                magento:
+                    name: Connect Magento
+                    absoluteUrl: /howto/magento.html
+                mshops:
+                    name: Connect MercadoShops
+                    absoluteUrl: /commingsoon.html
+        api:
+            icon: fa-code
+            name: API
             items:
+                getting-started:
+                    name: Getting Started
+                    absoluteUrl: /api/getting-started.html
+                users:
+                    name: Users
+                    absoluteUrl: /api/users.html
+                purchases:
+                    name: Purchases
+                    absoluteUrl: /api/purchases.html
 ```
 
-Note that the menu items can also contain HTML:
+Note that the menu sections can contain ```icons```:
 
 ```yaml
-home:
-    text: "<i class=\"fa fa-github\"></i> Home page"
-    relativeUrl: doc/faq.html
+api:
+    icon: fa-code
+    name: API
 ```
 
-## Menu
+## Current section and section item
 
-To set the current menu item (i.e. highlighted menu item), set the ```currentMenu```
+To set the current section and current section item (i.e. open section and highlighted section item), set the ```currentSection``` and ```currentMenu```
 key in the Markdown files:
 
 ```
-markdown
 ---
-currentMenu: home
+currentSection: api
+currentMenu: users
 ---
 
 # Welcome
