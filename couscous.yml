@@ -1,9 +1,9 @@
 template: 
-    url: https://github.com/diegorivas89/FixedSidebarTemplate
+    directory: .
     
 title: Fixed Sidebar Template
 subTitle: Another couscous template
-logoUrl: http://your-comapany.com/assets/logo.png
+logoUrl: http://globalplanit.ca/wp-content/uploads/2013/06/client-logo-placeholder.png
 footerText: Fixed Sidebar Template 2017
 
 # Header links

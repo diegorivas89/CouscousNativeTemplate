@@ -1,5 +1,5 @@
 ---
-currentMenu: home
+currentSection: home
 ---
 
 # Fixed Sidebar Template

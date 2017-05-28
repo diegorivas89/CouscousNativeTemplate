@@ -100,7 +100,7 @@
                                 {% if menu is defined %}
                                     <ol class="breadcrumb">
                                         <li>{{subTitle}}</li>
-                                        <li class="active">{{ menu.sections[currentSection].name | striptags }}</li>
+                                        <li class="active">{{ menu.sections[currentSection].name }}</li>
                                         {% if menu.sections[currentSection].items is defined %}
                                             <li class="active">{{ menu.sections[currentSection].items[currentMenu].name }}</li>
                                         {% endif %}
